@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter/rendering.dart';
+import './HomeScreen.dart';
 
 class SignInScreen extends StatefulWidget {
   @override
@@ -88,7 +89,7 @@ class _SignInScreenState extends State<SignInScreen> {
                             decoration: InputDecoration(
                                 border: UnderlineInputBorder(),
                                 suffix: IconButton(
-                                  icon: Icon(Icons.lock),
+                                  icon: Icon(Icons.remove_red_eye),
                                   onPressed: _toggle,
                                 ),
                                 focusedBorder: UnderlineInputBorder(
@@ -104,7 +105,12 @@ class _SignInScreenState extends State<SignInScreen> {
                                     textColor: Colors.white,
                                     padding: EdgeInsets.symmetric(vertical:16, horizontal:60),
                                     splashColor: Colors.blueAccent,
-                                    onPressed: (){}, 
+                                    onPressed: (){
+                                         Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => HomeScreen()));
+                                    }, 
                                     child: Text("Login")
                                 ),
                                 )
