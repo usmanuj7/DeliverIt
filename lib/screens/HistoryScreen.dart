@@ -5,12 +5,12 @@ import 'package:ride_app/Components/Drawer.dart';
 import 'package:url_launcher/url_launcher.dart';
 import './OrderScreen.dart';
 
-class HomeScreen extends StatefulWidget {
+class HistoryScreen extends StatefulWidget {
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  _HistoryScreenState createState() => _HistoryScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HistoryScreenState extends State<HistoryScreen> {
   void _launchMapsUrl(double lat, double lon) async {
     // final url = 'https://www.google.com/maps/search/?api=1&query=$lat,$lon';
     // final url =  'https://www.google.com/maps/dir/33.6494592,73.0988544/33.6484197,73.0293627/&travelmode=driving&dir_action=navigate';
@@ -43,8 +43,8 @@ class _HomeScreenState extends State<HomeScreen> {
               padding: const EdgeInsets.symmetric(vertical: 8),
               child: (ListTile(
                 onTap: () => {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Order()))
+                  // Navigator.push(context,
+                      // MaterialPageRoute(builder: (context) => Order()))
                 },
                 leading: Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -69,7 +69,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 trailing: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Icon(Icons.arrow_forward_ios, size: 14, color:Colors.lightBlueAccent),
+                  child: Icon(Icons.done, size: 25, color: Colors.greenAccent),
                 ),
               )),
             ));
@@ -123,7 +123,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
         // backgroundColor: Color.fromRGBO(1, 30, 31, .9),
         appBar: AppBar(
-          title: Text('Orders'),
+          title: Text('History'),
         ),
         body: buildBody(context), //  mainBody(),
         drawer: DrawerComponent());

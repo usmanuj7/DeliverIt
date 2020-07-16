@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:ride_app/screens/SignInScreen.dart' as prefix0;
-import './screens//SignInScreen.dart';
 
 void main() => runApp(MyApp());
 
@@ -68,6 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: "rider App",
       theme: ThemeData(),
       home: prefix0.SignInScreen(),

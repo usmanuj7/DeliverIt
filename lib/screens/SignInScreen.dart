@@ -96,25 +96,23 @@ class _SignInScreenState extends State<SignInScreen> {
                                     // borderRadius: BorderRadius.all(Radius.circular(5.0)),
                                     borderSide: BorderSide(
                                         color: Color.fromRGBO(1, 30, 31, .9))),
-                                hintText: 'Password')
-                                )
-                                ),
-                                Padding(padding: EdgeInsets.symmetric(vertical:12),
-                             child: FlatButton(
-                                    color: Colors.blueAccent,
-                                    textColor: Colors.white,
-                                    padding: EdgeInsets.symmetric(vertical:16, horizontal:60),
-                                    splashColor: Colors.blueAccent,
-                                    onPressed: (){
-                                         Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => HomeScreen()));
-                                    }, 
-                                    child: Text("Login")
-                                ),
-                                )
-                               
+                                hintText: 'Password'))),
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: 12),
+                      child: FlatButton(
+                          color: Colors.blueAccent,
+                          textColor: Colors.white,
+                          padding: EdgeInsets.symmetric(
+                              vertical: 16, horizontal: 60),
+                          splashColor: Colors.blueAccent,
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => HomeScreen()));
+                          },
+                          child: Text("Login")),
+                    )
                   ],
                 ),
               ),
